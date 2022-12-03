@@ -1,0 +1,21 @@
+.navbar{
+    background-color: var(--primary-color-project);
+}
+
+.company_logo{
+    color: var(--container-color);
+    font-size: var(--h2-font-size);
+}
+
+.company_logo > span{
+    color: var(--secondary-color-project);
+    font-weight: var(--font-medium);
+}
+
+.toogle-btn{
+    background-color: var(--container-color);
+}
+
+.navigation__item{
+    color: white;
+}
