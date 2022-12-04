@@ -1,0 +1,26 @@
+aside > img {
+    width: 100%;
+    height: auto;
+}
+
+main{
+    text-align: center;
+}
+
+main > h1 {
+    color: var(--secondary-color-project);
+}
+
+main > p > em {
+    color: var(--secondary-color-project);
+}
+
+
+/* .back_to_home{
+    background-color: var(--primary-color-project);
+    outline: none;
+}
+
+.back_to_home :hover {
+    background-color: var(--secondary-color-project);
+} */
