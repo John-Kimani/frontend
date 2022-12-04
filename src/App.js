@@ -16,7 +16,7 @@ function App() {
 
         <NavbarComponent />
         <Routes>
-          <Route path='/cart' element={<Cart />} />
+          <Route exact path='/cart' element={<Cart />} />
           <Route exact path='/' element={<Home />} />
           <Route path='*' element={<PageNotFound404 />}/>
         </Routes>
