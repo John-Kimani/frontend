@@ -1,8 +1,39 @@
 import { useGetAllProductsQuery } from "../../features/productsApi";
+import "./home.css";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 
 const Home = () => {
-    const { data, error, isLoading } = useGetAllProductsQuery();
-    return ( <h2>Home</h2> );
-}
- 
+  // const { items, status} = useSelector(state => state.products)
+  const { data, error, isLoading } = useGetAllProductsQuery();
+  return (
+    <div className="container container-fluid">
+      {isLoading ? (<p>Loading...</p>
+      ) : error ? (
+      <p>An errror occured</p>) : (
+      <>
+      <h2 className="text-center">Menu of the day</h2>
+      <div className="row">
+        {data?.map( product => <div key={product.id} className="col-sm-12 col-md-4 col-lg-4">
+            <Card>
+                <Card.Img variant='top' src={product.image} alt={product.name}/>
+                <Card.Body className="card__body">
+                    <Card.Title className="card__body-title">{product.name} <span className="price">KSH: {product.price}</span></Card.Title>
+                    <Card.Text>
+                       <strong>Description: </strong> {product.desc}
+                    </Card.Text>
+                    <div className="d-grid">
+                    <Button variant="outline" className="add_to_cart-btn">Add to cart</Button>
+                    </div>
+                </Card.Body>
+            </Card>
+        </div>
+            )}
+      </div>
+      </>)}
+    </div>
+  );
+};
+
 export default Home;
