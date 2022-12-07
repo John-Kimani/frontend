@@ -5,6 +5,7 @@ import { addToCart } from "../../features/cartSlice";
 import "./home.css";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 
 
@@ -25,7 +26,19 @@ const Home = () => {
     <div className="container container-fluid">
       {isLoading ? (<p>Loading...</p>
       ) : error ? (
-      <p>An error occured</p>) : (
+        <div className="container container-fluid">
+            <main className="pt-4">
+              <h1>Sorry! Internal Server error.</h1>
+              <p>
+                Seems our servers are down. Please try again later.
+                 <em>. . . if this error persists please contact <a href="https://kimanijohn.netlify.app/" target='_blank' rel="noreferrer">admin</a>.</em>
+              </p>
+              <Link to="/">
+                <Button variant="outline" className="back_to_home">Back to Home Page</Button>
+              </Link>
+            </main>
+        <div className="content"></div>
+      </div>) : (
       <>
       <h2 className="text-center">Menu of the day</h2>
       <div className="row">

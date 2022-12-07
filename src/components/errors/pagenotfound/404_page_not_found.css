@@ -16,11 +16,15 @@ main > p > em {
 }
 
 
-/* .back_to_home{
-    background-color: var(--primary-color-project);
-    outline: none;
+.back_to_home{
+    color: var(--secondary-color-project);
+    background-color: none !important;
+    outline: 1px solid var(--primary-color-project) !important;
+    letter-spacing: 1.2px;
 }
 
 .back_to_home :hover {
-    background-color: var(--secondary-color-project);
-} */
+    color: var(--primary-color-project);
+    background-color: none !important;
+    outline: 1px solid var(--secondary-color-project) !important;
+}

@@ -23,7 +23,7 @@ const PageNotFound404 = () => {
               exist <em>. . . like your social life.</em>
             </p>
             <Link to="/">
-              <Button className="back_to_home">Back to Home Page</Button>
+              <Button variant="outline" className="back_to_home">Back to Home Page</Button>
             </Link>
           </main>
         </div>
