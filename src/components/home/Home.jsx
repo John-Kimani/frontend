@@ -41,8 +41,8 @@ const Home = () => {
       </div>) : (
       <>
       <h2 className="section__title">Menu of the day</h2>
-      <div className="row mt-3 pt-4">
-        {data?.map( product => <div key={product.id} className="col-sm-12 col-md-4 col-lg-4">
+      <div className="row mt-1 pt-2 mb-4">
+        {data?.map( product => <div key={product.id} className="col-sm-12 col-md-4 col-lg-4 mt-3">
             <Card>
                 <Card.Img variant='top' src={product.image} alt={product.name}/>
                 <Card.Body className="card__body">
