@@ -65,4 +65,5 @@
   color: var(--secondary-color-project);
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
 }

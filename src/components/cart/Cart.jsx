@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
 
@@ -6,9 +6,16 @@ import "./cart.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
+import { removeFromCart } from "../../features/cartSlice";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+
+  const dispatch = useDispatch();
+
+  const handleRemoveFromCart = (cartItem) => {
+    dispatch(removeFromCart(cartItem))
+  }
 
   return (
     <div className="container container-fluid">
@@ -64,7 +71,7 @@ const Cart = () => {
                     <div className="col-sm-6">
                       <p>{cartItem.name}</p>
                       <p className="description">{cartItem.desc}</p>
-                      <Button variant="outline" className="remove__cart-item">
+                      <Button variant="outline-danger" className="remove__cart-item" onClick={() => handleRemoveFromCart(cartItem)}>
                         Remove
                       </Button>
                     </div>

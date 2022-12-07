@@ -21,17 +21,9 @@
 }
 
 .remove__cart-item{
-    color: var(--secondary-color-project);
-    background-color: none !important;
-    outline: 1px solid var(--primary-color-project) !important;
     letter-spacing: 1.2px;
 }
 
-.remove__cart-item:hover{
-    color: var(--primary-color-project);
-    background-color: none !important;
-    outline: 1px solid var(--secondary-color-project) !important;
-}
 
 .remove__cart-quantity{
     color: red;
@@ -46,9 +38,19 @@
 }
 
 .checkout-btn{
-    color: green;
-    outline: 1px solid  red;
     width: 100%;
+    color: var(--primary-color-project);
+    background-color: none !important;
+    outline: 1px solid var(--secondary-color-project) !important;
+    letter-spacing: 1.2px;
+}
+
+.checkout-btn:hover{
+    width: 100%;
+    color: var(--secondary-color-project);
+    background-color: none !important;
+    outline: 1px solid var(--primary-color-project) !important;
+    letter-spacing: 1.2px;
 }
 
 .continue_shopping-btn{
