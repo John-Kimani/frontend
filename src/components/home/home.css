@@ -11,10 +11,10 @@
 .price{
     float: right;
     font-size: var(--small-font-size);
-    background-color: var(C);
+    /* background-color: var(--primary-color-project); */
     color: var(--secondary-color-project);
-    border-radius: 2rem;
-    padding: var(--mb-0-25);
+    /* border-radius: 2rem;
+    padding: var(--mb-0-25); */
     height: var(--mb-2);
     display: grid;
     place-content: center;
