@@ -6,7 +6,7 @@ import "./cart.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
-import { removeFromCart } from "../../features/cartSlice";
+import { addToCart, decreaseCart, removeFromCart } from "../../features/cartSlice";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -15,7 +15,15 @@ const Cart = () => {
 
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem))
-  }
+  };
+
+  const handleDecreaseCart = (cartItem) => {
+    dispatch(decreaseCart(cartItem));
+  };
+
+  const handleIncreaseCart = (cartItem) => {
+    dispatch(addToCart(cartItem))
+  };
 
   return (
     <div className="container container-fluid">
@@ -82,13 +90,14 @@ const Cart = () => {
                       <Button
                         variant="outline"
                         className="remove__cart-quantity"
+                        onClick={ () => handleDecreaseCart(cartItem) }
                       >
                         -
                       </Button>
                     </div>
                     <div className="col-sm-4">{cartItem.cartQuantity}</div>
                     <div className="col-sm-4">
-                      <Button variant="outline" className="add__cart-quantity">
+                      <Button variant="outline" className="add__cart-quantity" onClick={ () => handleIncreaseCart(cartItem)}>
                         +
                       </Button>
                     </div>
