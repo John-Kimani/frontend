@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
@@ -10,6 +11,7 @@ import {
   addToCart,
   clearCart,
   decreaseCart,
+  getTotals,
   removeFromCart,
 } from "../../features/cartSlice";
 
@@ -17,6 +19,10 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart, dispatch]);
 
   const handleRemoveFromCart = (cartItem) => {
     dispatch(removeFromCart(cartItem));
@@ -33,6 +39,11 @@ const Cart = () => {
   const handleClearCart = () => {
     dispatch(clearCart());
   };
+
+  const handleCheckout = () => {
+    alert('Checkout feature coming soon. Thank you for shopping with us. Site developed by Kimani John');
+    handleClearCart()
+  }
 
   return (
     <div className="container container-fluid">
@@ -65,7 +76,7 @@ const Cart = () => {
         </div>
       ) : (
         <div>
-          <Table striped bordered hover>
+          <Table bordered hover>
             <thead>
               <tr>
                 <th>Product</th>
@@ -148,7 +159,7 @@ const Cart = () => {
                   <div>
                     <small>V.A.T inclusive</small>
                   </div>
-                  <Button variant="outline" className="checkout-btn">
+                  <Button variant="outline" className="checkout-btn" onClick={() => handleCheckout()}>
                     Check out
                   </Button>
                 </Card.Body>

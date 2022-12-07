@@ -19,3 +19,7 @@
 .navigation__item{
     color: white;
 }
+
+.cart-quantity{
+    color: rgb(255, 72, 72);
+}
