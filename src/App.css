@@ -58,3 +58,11 @@
   --z-fixed: 100;
   --z-modal: 1000;
 }
+
+.section__title{
+  text-align: center;
+  margin-top: var(--mb-2);
+  color: var(--secondary-color-project);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+}
