@@ -67,3 +67,8 @@
   font-weight: var(--font-semi-bold);
   text-transform: uppercase;
 }
+
+.coming__soon{
+  display: grid;
+  place-content: center;
+}

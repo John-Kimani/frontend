@@ -52,7 +52,7 @@ const Cart = () => {
         <div className="start__shopping">
           <p>Your cart is currently empty</p>
           <div>
-            <Link to="/">
+            <Link to="/menu">
               <Button variant="outline" className="continue_shopping-btn">
                 <span>
                   <svg
@@ -164,7 +164,7 @@ const Cart = () => {
                   </Button>
                 </Card.Body>
                 <Card.Footer>
-                  <Link to="/">
+                  <Link to="/menu">
                     <Button variant="outline" className="continue_shopping-btn">
                       <span>
                         <svg

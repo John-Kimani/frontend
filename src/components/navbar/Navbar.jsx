@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 import "./navbar.css"
 
@@ -13,23 +12,14 @@ const NavbarComponent = () => {
   return (
     <Navbar className="navbar" expand="lg">
       <Container>
-        <Navbar.Brand href="#home" className="company_logo">Tamu <span>Foods</span></Navbar.Brand>
+        <Navbar.Brand href="/" className="company_logo">Tamu <span>Foods</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="toogle-btn"/>
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="mx-auto">
             <Nav.Link href="/" className="navigation__item">Home</Nav.Link>
-            <Nav.Link href="#" className="navigation__item">Menu</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
+            <Nav.Link href="/menu" className="navigation__item">Menu</Nav.Link>
+            <Nav.Link href="/coming-soon" className="navigation__item">Restaurants</Nav.Link>
+            <Nav.Link href="/coming-soon" className="navigation__item">Contact Us</Nav.Link>
           </Nav>
           <Nav className="ml-auto">
             <Nav.Link href="/cart" className="navigation__item">

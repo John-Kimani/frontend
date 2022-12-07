@@ -40,8 +40,8 @@ const Home = () => {
         <div className="content"></div>
       </div>) : (
       <>
-      <h2 className="text-center">Menu of the day</h2>
-      <div className="row">
+      <h2 className="section__title">Menu of the day</h2>
+      <div className="row mt-3 pt-4">
         {data?.map( product => <div key={product.id} className="col-sm-12 col-md-4 col-lg-4">
             <Card>
                 <Card.Img variant='top' src={product.image} alt={product.name}/>

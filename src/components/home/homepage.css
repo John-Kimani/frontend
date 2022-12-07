@@ -1,0 +1,56 @@
+
+ .tamu-logo{
+    color: var(--container-color);
+    font-weight: var(--font-semi-bold);
+   }
+  
+   .foods-logo{
+    color: var(--secondary-color-project);
+    font-weight: var(--font-semi-bold);
+   }
+  
+   .hero__section{
+    background-image: url(../../assets/pork_ribs.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--container-color);
+    padding: 6rem 0 2rem;
+   }
+  
+   .header-home{
+    color: var(--container-color);
+    font-size: var(--h1-font-size);
+   }
+  
+   .header-body{
+    font-weight: var(--font-semi-bold);
+    font-size: var(--small-font-size);
+   }
+   .header-description{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+   }
+
+   .steps{
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    2px 2px 5px rgba(94, 104, 121, 0.3);
+}
+
+.steps_header{
+  color: var(--primary-color-project);
+  text-align: center;
+}
+
+.steps_sub-header{
+  color: var(--secondary-color-project);
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+.about_us-header{
+    text-align: center;
+    color: var(--primary-color-project);
+}
+
+  

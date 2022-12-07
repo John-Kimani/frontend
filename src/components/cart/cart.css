@@ -58,6 +58,7 @@
     background-color: none !important;
     outline: 1px solid var(--primary-color-project) !important;
     letter-spacing: 1.2px;
+    width: 100%;
 }
 
 .continue_shopping-btn:hover{
