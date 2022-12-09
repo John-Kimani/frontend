@@ -10,7 +10,7 @@ export const productsFetch = createAsyncThunk(
     "products/productsFetch",
     async () => {
         try {
-            const response = await axios.get('http://localhost:5000/products');
+            const response = await axios.get('https://express-backend-tamufoods.up.railway.app/');
             return response?.data;
         }catch(error){
             console.log(error)
